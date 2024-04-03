@@ -19,8 +19,8 @@ class AddPlaceVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let uploadButton = navigationController!
-        uploadButton.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(title: "Upload", style: UIBarButtonItem.Style.done, target: self, action: #selector(uploadClicked))
+     //   let uploadButton = navigationController!
+      //  uploadButton.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(title: "Upload", style: UIBarButtonItem.Style.done, target: self, action: #selector(uploadClicked))
         
        // uploadButton.navigationBar.topItem?.rightBarButtonItem?.isEnabled = false
         
@@ -28,6 +28,9 @@ class AddPlaceVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         imageView.isUserInteractionEnabled = true
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageSelect))
         imageView.addGestureRecognizer(gestureRecognizer)
+        
+        let keyboardGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(keyboardGestureRecognizer)
         
     }
     
@@ -46,15 +49,41 @@ class AddPlaceVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         self.dismiss(animated: true, completion: nil)
     }
     
-    @objc func uploadClicked(){
+ //   @objc func uploadClicked(){}
         
-    }
+
+    
+    @objc func hideKeyboard(){
+        view.endEditing(true)}
     
     
     
     @IBAction func nextClicked(_ sender: Any) {
         
-        performSegue(withIdentifier: "toMapVC", sender: nil)
+        if placeNameText.text != "" || placeTypeText.text != "" || commentText.text != ""{
+            
+            if let chosenImage = imageView.image{
+                let placeModel = PlaceModel.sharedInstance
+                placeModel.placeName = placeNameText.text!
+                placeModel.placeType = placeTypeText.text!
+                placeModel.placeComment = commentText.text!
+                placeModel.placeImage = chosenImage
+            }
+            performSegue(withIdentifier: "toMapVC", sender: nil)
+            
+        }
+        else{
+            
+            let placeModelError = UIAlertController(title: "Error", message: "Please fill the place detail", preferredStyle: UIAlertController.Style.alert)
+            let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
+            placeModelError.addAction(okButton)
+            self.present(placeModelError, animated: true, completion: nil)
+            
+        }
+        
+        
+        
+
     }
     
 }

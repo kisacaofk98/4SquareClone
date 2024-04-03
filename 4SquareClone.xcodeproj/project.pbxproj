@@ -20,6 +20,7 @@
 		17A1C85C2BBCD6ED0096B38E /* AddPlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A1C85B2BBCD6ED0096B38E /* AddPlaceVC.swift */; };
 		17A1C85E2BBCDA690096B38E /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A1C85D2BBCDA690096B38E /* MapVC.swift */; };
 		17A1C8602BBCE5890096B38E /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A1C85F2BBCE5890096B38E /* DetailVC.swift */; };
+		17A1C8622BBDF04B0096B38E /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A1C8612BBDF04B0096B38E /* PlaceModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		17A1C85B2BBCD6ED0096B38E /* AddPlaceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaceVC.swift; sourceTree = "<group>"; };
 		17A1C85D2BBCDA690096B38E /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		17A1C85F2BBCE5890096B38E /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		17A1C8612BBDF04B0096B38E /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				17A1C85B2BBCD6ED0096B38E /* AddPlaceVC.swift */,
 				17A1C85D2BBCDA690096B38E /* MapVC.swift */,
 				17A1C85F2BBCE5890096B38E /* DetailVC.swift */,
+				17A1C8612BBDF04B0096B38E /* PlaceModel.swift */,
 				17A1C8432BBB6D2E0096B38E /* Main.storyboard */,
 				17A1C8462BBB6D2F0096B38E /* Assets.xcassets */,
 				17A1C8482BBB6D2F0096B38E /* LaunchScreen.storyboard */,
@@ -170,6 +173,7 @@
 				17A1C83E2BBB6D2E0096B38E /* AppDelegate.swift in Sources */,
 				17A1C85A2BBCB02B0096B38E /* PlacesVC.swift in Sources */,
 				17A1C85C2BBCD6ED0096B38E /* AddPlaceVC.swift in Sources */,
+				17A1C8622BBDF04B0096B38E /* PlaceModel.swift in Sources */,
 				17A1C8402BBB6D2E0096B38E /* SceneDelegate.swift in Sources */,
 				17A1C8602BBCE5890096B38E /* DetailVC.swift in Sources */,
 			);
